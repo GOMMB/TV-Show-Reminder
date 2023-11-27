@@ -3,11 +3,6 @@ function deleteAllEventsInCalendar(calendar) {
   events.forEach(event => event.deleteEvent())
 }
 
-function parseISOLocal(s) {
-  var b = s.split(/\D/);
-  return new Date(b[0], b[1]-1, b[2]);
-}
-
 function addEpisodesToCalendar(calendar, episodes) {
   episodes.forEach(episode => {
     let startTime = parseISOLocal(episode['episodeAirDate'])

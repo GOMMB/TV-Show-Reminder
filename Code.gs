@@ -5,6 +5,7 @@ function install() {
   ScriptApp.newTrigger('refreshShowsToCalendar')
         .timeBased()
         .everyDays(1)
+        .atHour(19)
         .create();
 }
 
